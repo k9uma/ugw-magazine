@@ -1,10 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="3d505a1d-fa52-4e61-8709-17bccdb93890" name="Default" comment="">
-      <change type="DELETED" beforePath="$PROJECT_DIR$/.env.example" afterPath="" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/composer.lock" afterPath="$PROJECT_DIR$/composer.lock" />
-    </list>
+    <list default="true" id="3d505a1d-fa52-4e61-8709-17bccdb93890" name="Default" comment="" />
     <ignored path="ugw-magazine.iws" />
     <ignored path=".idea/workspace.xml" />
     <ignored path=".idea/dataSources.local.xml" />
@@ -168,12 +165,12 @@
       <updated>1476476838242</updated>
       <workItem from="1476476840059" duration="796000" />
       <workItem from="1476478050645" duration="442000" />
-      <workItem from="1476478565688" duration="43000" />
+      <workItem from="1476478565688" duration="114000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="1281000" />
+    <option name="totallyTimeSpent" value="1352000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="-8" y="-8" width="1296" height="776" extended-state="6" />
