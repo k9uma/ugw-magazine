@@ -25,22 +25,22 @@ class RoleTableSeeder extends Seeder
         Role::create([
             'id'            => 2,
             'name'          => 'Administrator',
-            'description'   => 'Full access to create, edit, and update companies, and orders.'
+            'description'   => 'Full access to create, edit, and update necessary information.'
         ]);
         Role::create([
             'id'            => 3,
-            'name'          => 'Manager',
-            'description'   => 'Ability to create new companies and orders, or edit and update any existing ones.'
+            'name'          => 'Marketing Manager',
+            'description'   => 'Ability to View all the selected articles.'
         ]);
         Role::create([
             'id'            => 4,
-            'name'          => 'Company Manager',
-            'description'   => 'Able to manage the company that the user belongs to, including adding sites, creating new users and assigning licences.'
+            'name'          => 'Faculty Coordinator',
+            'description'   => 'Able to manage the faculty that the user belongs to, including approving articles and making comments.'
         ]);
         Role::create([
             'id'            => 5,
-            'name'          => 'User',
-            'description'   => 'A standard user that can have a licence assigned to them. No administrative features.'
+            'name'          => 'Student',
+            'description'   => 'A standard user that can upload and view articles and comments. No administrative features.'
         ]);
     }
 }
