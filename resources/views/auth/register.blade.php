@@ -39,6 +39,7 @@
                         </div>
 
                         <div class="form-group{{ $errors->has('type') ? ' has-error' : '' }}">
+<<<<<<< HEAD
                             <label for="type" class="col-md-4 control-label">User Type</label>
 
                             <div class="col-md-6">
@@ -47,6 +48,15 @@
                                     <option value="coordinator">Faculty Coordinator</option>
                                     <option value="student">Student</option>
                                 </select>
+=======
+                            <label for="type" class="col-md-4 control-label">Type</label>
+
+                            <div class="col-md-6">
+                                <Select id="type" type="text" class="form-control" name="type">
+                                    <option value="students"> Students</option>
+                                    <option value="student"> student</option>
+                                </Select>
+>>>>>>> be8554b7e0ac873e08f55aafbf2bade008c9174c
 
                                 @if ($errors->has('type'))
                                     <span class="help-block">

@@ -27,8 +27,11 @@ Route::get('user/{user}', [
  	return view('student.index');
  });
 Route::auth();
+<<<<<<< HEAD
 Route::get('lovemore', function(){
     return view(lovemore);
 });
+=======
+>>>>>>> be8554b7e0ac873e08f55aafbf2bade008c9174c
 
 Route::get('/home', 'HomeController@index');
