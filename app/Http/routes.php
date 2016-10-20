@@ -12,7 +12,7 @@
 */
 
 Route::get('/', function () {
-    return view('login');
+    return view('welcome');
 });
 
 Route::get('user/{user}', [
@@ -20,9 +20,15 @@ Route::get('user/{user}', [
     'uses' => 'UserController@index',
     'roles' => ['administrator', 'manager'] // Only an administrator, or a manager can access this route
 ]);
- Route::get('/welcome', function(){
+ /*Route::get('/welcome', function(){
  	return view('welcome');
- });
+ });*/
  Route::get('/student', function(){
  	return view('student.index');
  });
+Route::auth();
+Route::get('lovemore', function(){
+    return view(lovemore);
+});
+
+Route::get('/home', 'HomeController@index');
