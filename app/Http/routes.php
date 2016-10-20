@@ -11,22 +11,22 @@
 |
 */
 
+Route::auth();
 Route::get('/', function () {
     return view('welcome');
 });
 
-Route::get('user/{user}', [
+Route::get('admin', [
     'middleware' => ['auth', 'roles'], // A 'roles' middleware must be specified
-    'uses' => 'UserController@index',
-    'roles' => ['administrator', 'manager'] // Only an administrator, or a manager can access this route
+    'uses' => 'AdminController@index',
+    'roles' => ['administrator'] // Only an administrator, or a manager can access this route
 ]);
- /*Route::get('/welcome', function(){
- 	return view('welcome');
- });*/
- Route::get('/student', function(){
- 	return view('student.index');
- });
-Route::auth();
+
+ Route::get('student',
+     ['middleware' => ['auth', 'roles'],
+      'uses'=> 'StudentController@index',
+     'roles' => ['student']
+     ]);
 
 /*Route::get('lovemore', function(){
     return view(lovemore);

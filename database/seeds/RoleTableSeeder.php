@@ -14,33 +14,33 @@ class RoleTableSeeder extends Seeder
     {
         //
         if (App::environment() === 'production') {
-            exit('I just stopped you getting fired. Love, Amo.');
+            exit('Not working in test environment');
         }
         //DB::table('role')->truncate();
         Role::create([
             'id'            => 1,
-            'name'          => 'Root',
+            'name'          => 'root',
             'description'   => 'Use this account with extreme caution. When using this account it is possible to cause irreversible damage to the system.'
         ]);
         Role::create([
             'id'            => 2,
 
-            'name'          => 'Administrator',
+            'name'          => 'administrator',
             'description'   => 'Full access to create, edit, and update necessary information.'
         ]);
         Role::create([
             'id'            => 3,
-            'name'          => 'Marketing Manager',
+            'name'          => 'manager',
             'description'   => 'Ability to View all the selected articles.'
         ]);
         Role::create([
             'id'            => 4,
-            'name'          => 'Faculty Coordinator',
+            'name'          => 'coordinator',
             'description'   => 'Able to manage the faculty that the user belongs to, including approving articles and making comments.'
         ]);
         Role::create([
             'id'            => 5,
-            'name'          => 'Student',
+            'name'          => 'student',
             'description'   => 'A standard user that can upload and view articles and comments. No administrative features.'
         ]);
     }
