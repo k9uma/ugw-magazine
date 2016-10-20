@@ -16,7 +16,7 @@ class RoleTableSeeder extends Seeder
         if (App::environment() === 'production') {
             exit('I just stopped you getting fired. Love, Amo.');
         }
-        DB::table('role')->truncate();
+        //DB::table('role')->truncate();
         Role::create([
             'id'            => 1,
             'name'          => 'Root',
@@ -24,6 +24,7 @@ class RoleTableSeeder extends Seeder
         ]);
         Role::create([
             'id'            => 2,
+
             'name'          => 'Administrator',
             'description'   => 'Full access to create, edit, and update necessary information.'
         ]);
