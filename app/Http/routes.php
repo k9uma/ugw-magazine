@@ -11,21 +11,30 @@
 |
 */
 
+Route::auth();
 Route::get('/', function () {
     return view('welcome');
 });
 
-Route::get('user/{user}', [
+Route::get('admin', [
     'middleware' => ['auth', 'roles'], // A 'roles' middleware must be specified
-    'uses' => 'UserController@index',
-    'roles' => ['administrator', 'manager'] // Only an administrator, or a manager can access this route
+    'uses' => 'AdminController@index',
+    'roles' => ['administrator'] // Only an administrator, or a manager can access this route
 ]);
 
+<<<<<<< HEAD
  Route::get('/student', function(){
  	return view('student.index');
  });
 
 Route::auth();
+=======
+ Route::get('student',
+     ['middleware' => ['auth', 'roles'],
+      'uses'=> 'StudentController@index',
+     'roles' => ['student']
+     ]);
+>>>>>>> 1451ab6fcfc4b10b3be3ec6ef1877450f4944ea8
 
 Route::get('/home', 'HomeController@index');
 

@@ -42,10 +42,11 @@
                             <label for="type" class="col-md-4 control-label">User Type</label>
 
                             <div class="col-md-6">
-                                <select class="form-control" id="type" type="text" name="type">
-                                    <option value="manager">Manager</option>
-                                    <option value="coordinator">Faculty Coordinator</option>
-                                    <option value="student">Student</option>
+                                <select class="form-control" id="type" type="number" name="type">
+                                    <option>-</option>
+                                    <option value="3">Manager</option>
+                                    <option value="4">Faculty Coordinator</option>
+                                    <option value="5">Student</option>
                                 </select>
                                 @if ($errors->has('type'))
                                     <span class="help-block">
