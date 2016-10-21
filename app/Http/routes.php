@@ -20,16 +20,21 @@ Route::get('user/{user}', [
     'uses' => 'UserController@index',
     'roles' => ['administrator', 'manager'] // Only an administrator, or a manager can access this route
 ]);
- /*Route::get('/welcome', function(){
- 	return view('welcome');
- });*/
+
  Route::get('/student', function(){
  	return view('student.index');
  });
+
 Route::auth();
 
-/*Route::get('lovemore', function(){
-    return view(lovemore);
-});*/
-
 Route::get('/home', 'HomeController@index');
+
+Route::get('/admin', 'AdminController@admin');
+
+Route::get('/coordinator', 'CoordinatorController@coordinator');
+
+Route::get('/manager', 'ManagerController@manager');
+
+Route::get('/student', 'StudentController@student');
+
+Route::get('/guest', 'GuestController@guest'); 
