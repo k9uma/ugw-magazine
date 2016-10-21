@@ -22,25 +22,20 @@ Route::get('admin', [
     'roles' => ['administrator'] // Only an administrator, or a manager can access this route
 ]);
 
-<<<<<<< HEAD
- Route::get('/student', function(){
- 	return view('student.index');
- });
-
-Route::auth();
-=======
- Route::get('student',
-     ['middleware' => ['auth', 'roles'],
-      'uses'=> 'StudentController@index',
+ Route::get('student', [
+     'middleware' => ['auth', 'roles'],
+     'uses'=> 'StudentController@index',
      'roles' => ['student']
      ]);
->>>>>>> 1451ab6fcfc4b10b3be3ec6ef1877450f4944ea8
+
+Route::get('coordinator', [
+    'middleware' => ['auth', 'roles'],
+    'uses'=> 'CoordinatorController@coordinator',
+    'roles' => ['coordinator']
+]);
 
 Route::get('/home', 'HomeController@index');
 
-Route::get('/admin', 'AdminController@admin');
-
-Route::get('/coordinator', 'CoordinatorController@coordinator');
 
 Route::get('/manager', 'ManagerController@manager');
 
